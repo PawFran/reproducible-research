@@ -1,0 +1,34 @@
+---
+output: html_document
+---
+My first markdown file
+=======================
+
+This is my first markdown file, 
+
+first, we're going to load some data.
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+let's first make a pairs plot of the data
+
+```{r}
+pairs(airquality)
+```
+
+here's a regression model of ozone on wind, solar radiation and temperature
+
+```{r}
+library(stats)
+fit <- lm(Ozone ~ Wind + Solar.R + Temp, data = airquality)
+summary(fit)
+```
+
+here's an unordered list:
+
+* first element
+* second element
